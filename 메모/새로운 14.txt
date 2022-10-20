@@ -1,0 +1,14 @@
+7/27
+truthy : true로 다뤄지는 값
+0이 아닌 숫자
+''빈 문자열이 아닌 문자열
+[1,2] 배열
+{name:'정', age:30}프로퍼티가 있는 객체
+
+falsy : false로 다뤄지는 값
+0,음수, null, undefined, false,''(빈 문자열)
+
+
+7/29
+{property}
+{property key(문자열) : property value(다 됨. 함수, 배열 등),...}

@@ -1,0 +1,33 @@
+Optional
+	정의 : 요소를 최대 1개 갖는 컨테이너
+	잇점 : null오류를 줄일 수 있는 api를 만들수 있다.
+	
+	
+가시성 반환타입 메소드명(매개변수 타입 매개변수명...);
+class Person{
+	private String name;
+	public getName(){ 
+		return name; 
+		}
+	}
+
+public Person getPerson(int id){
+	return null;
+};
+	
+public void print(int id);
+
+Person person = getPerson(10);
+if(person !null){
+	person.getName();
+}
+
+public Optional<Person> getPerson(int id);
+public void getPerson(int id);
+	
+	
+	
+	
+	ctrl alt v
+	
+	ctrl alt n = 인라인

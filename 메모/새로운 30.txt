@@ -1,0 +1,77 @@
+      INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','자유게시판입니다.', 1,'자유롭게 글을 작성해보세요!');
+        INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD002','정보공유방입니다.', 1,'다양한 정보들을 공유해보세요!');
+        INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD004','문의사항방입니다.', 1,'궁금한 점을 문의주세요!');
+  
+  
+  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','새로생긴 요가원 진짜 좋아요', 7,'<p>집 근처에 새로운 요가원 생겼길래 등록하고 갔다왔습니다.</p><p></p><p>강사님이 요가에 진심이신분이라 저도 열심히 하게되더라구요</p><p></p><p>시청 근처 사시는분들 꼭 요가하러 오세요ㅠㅠ</p>');
+  
+  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','3대측정 도와주실분!', 6,'<p>내용1</p>');
+  
+    INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','울산에 수영장 추천해주세요', 5,'<p>!</p>');
+  
+    INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','요가 너무 재밌지않나요?.', 4,'<p>!</p>');
+  
+    INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','옆동네까지 운동 다니는 중인데요', 3,'<p>!</p>');
+
+  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','울과대 스케이트장 가보신분 계신가요?', 2,'<p>?</p>');
+  
+    INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','안녕하세요! 운동초보 조언부탁드립니다.', 1,'<p>초보가 가볍고 재밌게 즐길만한 운동이 뭐가있을까요?</p><p></p><p>집 앞 산책만 했는데 이제 추워져서 실내운동으로 하고싶어요!</p><p></p><p>미리 감사합니다</p>');
+  
+    INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','배드민턴 같이 치실분 구합니다.', 7,'<p>초보가 가볍고 재밌게 즐길만한 운동이 뭐가있을까요?</p><p></p><p>집 앞 산책만 했는데 이제 추워져서 실내운동으로 하고싶어요!</p><p></p><p>미리 감사합니다</p>');
+  
+      INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','산책하면서 강아지 구경하는거 넘 좋지않나요ㅠㅠ', 6,'<p>초보가 가볍고 재밌게 즐길만한 운동이 뭐가있을까요?</p><p></p><p>집 앞 산책만 했는데 이제 추워져서 실내운동으로 하고싶어요!</p><p></p><p>미리 감사합니다</p>');
+    
+	INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','얼른 겨울되서 스키타러 가고싶네요.', 5,'<p>초보가 가볍고 재밌게 즐길만한 운동이 뭐가있을까요?</p><p></p><p>집 앞 산책만 했는데 이제 추워져서 실내운동으로 하고싶어요!</p><p></p><p>미리 감사합니다</p>');
+  
+  	INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD001','운동 추천해주세요!', 5,'<p>초보가 가볍고 재밌게 즐길만한 운동이 뭐가있을까요?</p><p></p><p>집 앞 산책만 했는데 이제 추워져서 실내운동으로 하고싶어요!</p><p></p><p>미리 감사합니다</p>');
+  
+  
+
+      INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)  
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD002','남구 헬스장 할인행사한대요.', 2,'남구 사시는분들 한 번 찾아보세여.');
+  
+   INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)  
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD002','필라테스 신규오픈 회원행사 진행', 3,'남구 사시는분들 한 번 찾아보세여.');
+  
+  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)  
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD002','헬스장 3+1개월 이벤트 진행합니다', 4,'남구 사시는분들 한 번 찾아보세여.');
+
+	  
+	  
+	 
+	  
+	  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD004','안녕하세요. 캘린더에 궁금한점 있습니다.', 4,'내용무');
+      INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD004','문의드립니다.', 5,'데이터 업데이트 주기가 궁금합니다.');
+
+        INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, 'BD004','업데이트 문의드립니다.', 7,'데이터 업데이트 주기가 궁금합니다.');
+  
+  
+  
+  
+  퇴근전에 운동하시는분 계신가요?
+  일찍 여는 헬스장 찾고있는데 알고계신곳 있으시면 추천부탁드립니다.
+  
+  
+  
+게시글 작성, 수정, 검색
+대댓글 작성
+
+즐겨찾기페이지 별점순 정렬
+마이페이지 나의활동 댓글삭제, 정보수정(닉네임, 비밀번호), 탈퇴

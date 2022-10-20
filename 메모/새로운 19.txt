@@ -1,0 +1,12 @@
+로컬저장소 생성 git init
+	   제거 ./git 
+	   
+	   
+소스버전을 생성하여 push할 수 있는가
+무대올리기 
+사진찍기 git commit -m '메세지'
+
+원격저장소를 로컬저장소로 복제
+git clone 주소
+
+git pull origin 가져오기

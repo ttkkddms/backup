@@ -1,0 +1,11 @@
+
+
+6/3
+      //기본타입을 문자열로 int = x;
+      //System.out.println( x + "");
+      //System.out.println(String.valueOf(x));
+
+      //문자열을 기본타입으로
+      //wrapper클래스.parseXXX(문자열)
+ctrl + alt + m = 메소드만들기
+

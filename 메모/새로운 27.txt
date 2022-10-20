@@ -1,0 +1,39 @@
+첨부파일
+
+1.MultipartFile
+	-파일의 메타정보 추출
+	String getOriginalFilename();
+	String getContentType();
+	long getSize();
+	boolean isEmpty();
+	
+	
+	-파일을 스토리지에 저장
+	void transferTo(File dest)
+	default void transferTo(Path dest)
+	
+2. 첨부파일 조회
+	-첨부파일 다운로드
+	-브라우저 렌더링(ex 이미지)
+
+3. 파일 첨부파일
+	<form enctype="multipart/form-data">
+	
+	<input type="file">
+	<input type="file" multiple="multiple">
+	
+	
+4. 파일 저장
+	MultipartFile.transferTo()
+	//유일한 파일명 생성
+	UUID.randomUUID()
+	
+	
+	
+	9/20
+	카테고리선택 select, 카테고리별 게시글 분리
+	첨부파일버튼 (랜덤숫자, css)
+	조회수
+	추천버튼(회원만 클릭가능)
+	게시글번호 내림차순
+	

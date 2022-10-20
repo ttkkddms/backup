@@ -1,0 +1,99 @@
+
+	thymeleaf
+
+0. 기본특징
+	SSR(Server Side Rendering) 언어 중 SpringBoot에서 권장하는 언어
+	네추럴 템플릿 : 기존 html문서를 훼손하지않고 동적으로 html속성,컨텐츠를 동적으로 변경
+	th:속성 적용범위(시작태그~종료태그)
+		재정의(html 템플릿 문서에 있는 속성은 덮어쓰기하고 없는속성은 추가)
+	
+1. 변수선언 
+	th:with = "변수명:표현식"
+
+2.조건문  
+	case 1)
+		th:if
+		th:unless
+		
+	case 2)
+		th:switch, th:case
+		
+	case3)
+	${표현식} ? (true)
+	${표현식} ? (true):(false)
+	${표현식} ?: 기본값
+	
+	
+3.반복문 
+	1)요소반복
+	th:each="ele, eleStat:${collecttion | array}"
+
+	2) 지정한 횟수
+	th:each="count:${#numbers.sequence(from, to, step)}"
+
+4. 타임리프 유일한 자체태그
+	용도 : html태그 생성없이 그루핑
+	<th:block></th:block>
+
+5. url링크
+	@{/product/{pid}/{count}(pid="컴퓨터",count="10")}
+	=>/product/컴퓨터/10
+	
+	@{/product/{pid}/{count}(pid="컴퓨터",count="10",price="10000")}
+	=>/product/컴퓨터/10?price="10000"
+	
+6. 객체 멤버접근
+	${person.name}
+	${person['name']} <=객체멤버에 동적 접근시 사용
+	${person.getName()}
+
+7. 문자열 템플릿
+	|hello ${변수표현식}|
+
+8. html의 form태그와 연동하여 편리한 기능을 제공
+	-th:object => controller의 form객체
+	-th:field => <input>엘리먼트에 id, name, value속성이 자동추가! 대박
+	
+	#fields => 검증오류내용을 담고있는 객체
+	<div th:if="${#fields.hasGlobalErrors()}">
+	<p class="errmsg" th:each="err:${#fields.globalErrors()}"  th:text="${err}"></p>
+
+	-th:errors => <input>엘리먼트의 값이 오류가 있으면 오류메세지 표시
+	-th:errorclass => 오류가 있으면 스타일 적용
+	
+9. 표현식
+${} : 변수 표현식
+=> ${{}} : 포맷팅 적용
+@{} : url링크 표현식
+#{} : 메세지 표현식
+${#객체명} : 내장객체
+~{} : UI
+
+10. 조각 정의
+ 1) th:flagment="조각명"
+
+
+
+11. 조각참조는 조각 표현식으로
+~{templatename::selector}
+
+	templatename : /templates 폴더 아래 경로명을 포함한 view이름
+	selector : templatename파일 내에 선택자 참조
+
+	selector(선택자)의 종류 
+	1) th:flagment="조각명" or th:ref="조각명"
+	2) 태그이름
+	3) class값
+	4) id값
+ 
+ 
+ 12. 조각 참조
+ th:insert  - 현재 태그에 컨텐츠로 삽입
+ th:replace - 현재 태그를 교체
+ th:include - 현재 태그의 컨텐츠에 조각의 컨텐츠를 삽입  <= 비권장
+ 
+ 
+ 13. 조각참조시 파라미터 의미
+  ~{} 빈조각 : no markup 렌더링하지 않음
+  _ no opertation :  참조할 조각의 디폴트값을 사용
+ 

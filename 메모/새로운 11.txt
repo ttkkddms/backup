@@ -1,0 +1,16 @@
+flex box
+1. container & item
+
+2. main axis & cross axis
+
+7/15(금)
+1.css->html 연결하기 : html헤드에 link걸어주기
+2.css 시작은 항상 @charset "utf-8";
+3.html body에서 바로 스타일걸어주기 : 인라인방식 -1순위
+4.html헤드에서 <style> - 2순위
+5.css로 스타일성정 - 3순위
+4.시멘틱태그가 검색이나 장애인들을 위해 좋음
+웹문서 읽어주기 가능, 검색에 잘 걸려서.
+5.box-sizing
+border-box : border까지. 마진포함x 100 > 70
+content-box : content사이즈 유지 100 -> 100

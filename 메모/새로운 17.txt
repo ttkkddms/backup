@@ -1,0 +1,13 @@
+--계정생성
+create user c##springboot identified by springboot1234 
+default tablespace users
+temporary tablespace temp 
+profile default;
+--권한부여
+grant connect, resource to c##springboot;
+GRANT UNLIMITED TABLESPACE TO c##springboot;
+
+--락풀기
+alter user c##springboot account unlock;
+
+http://192.168.0.121:9080/product/all

@@ -1,0 +1,6 @@
+expo start
+ cd d:/javaedu9/project
+ expo init myapp1
+ code .  
+ 
+ 

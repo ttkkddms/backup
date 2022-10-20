@@ -1,0 +1,129 @@
+
+응답
+{
+  "header":{rtcd:"00", rtmsg:"성공"},
+  
+  "data":{
+	"pid":"1",
+	"pname":"컴퓨터",
+	"count":"10",
+	"price":"100000"
+	}
+}
+
+{
+  "header":{rtcd:"00", rtmsg:"성공"},
+  
+  "data":{
+		[
+			{
+			"name": "홍길동",
+			"age": 10
+		},
+		{
+			"name": "홍길순",
+			"age": 30
+		}
+		]
+    }
+}
+
+
+
+
+
+
+{
+  "header":{rtcd:"00", rtmsg:"성공"},
+  "data":{
+	[{
+	"pid":"1",
+	"pname":"컴퓨터",
+	"count":"10",
+	"price":"100000"
+	},
+	..
+	]
+  }
+}
+{
+  "header":{rtcd:"00", rtmsg:"성공"},
+  "data":{
+	[{
+	"pid":"1",
+	"pname":"컴퓨터",
+	"count":"10",
+	"price":"100000"
+	},
+	..
+	]
+  }
+}
+
+
+
+
+
+요청
+-등록
+{
+	"pname":"컴퓨터",
+	"count":"10",
+	"price":"100000"
+}
+
+-수정
+{
+	"pname":"컴퓨터",
+	"count":"10",
+	"price":"100000"
+}
+
+
+
+
+
+
+//
+////    Set<Person> persons = new HashSet<>();
+////    Map<String, Person> persons = new HashMap<>();
+//    List<Person> persons = new ArrayList<>();
+//
+//
+//    Person p1 = new Person("홍길동", 10);
+//    persons.add(p1);
+////    persons.put("1",p1);
+//
+//    Person p2 = new Person("홍길순", 30);
+//    persons.add(p2);
+////    persons.put("2",p2);
+
+-Java 객체
+{
+	"name": "홍길동",
+    "age": 10
+}
+
+-Map  (key,value)
+{
+    "1": {
+        "name": "홍길동",
+        "age": 10
+    },
+    "2": {
+        "name": "홍길순",
+        "age": 30
+    }
+}
+
+-Set, List  구조가 동일! 배열(인덱스로 접근)
+[
+    {
+        "name": "홍길동",
+        "age": 10
+    },
+    {
+        "name": "홍길순",
+        "age": 30
+    }
+]

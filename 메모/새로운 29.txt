@@ -1,0 +1,100 @@
+
+
+
+select M.memnickname, B.*, rownum
+  from (select bdno, bdcg, bdtitle, memno, bdcontent, bdcdate
+            from board
+         order by bdcdate asc)B, member M
+ where M.memno = B.memno
+ and rownum between 1 and 10
+  and B.bdcg = '정보공유' 
+ order by rownum desc;
+
+
+select rownum, t3.*
+  from (select t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate
+          from board t1, member t2
+         where t1.memno = t2.memno
+           and t1.bdcg = '자유게시판' 
+           and
+           (t1.bdtitle like '%1%' or
+           t1.bdcontent like '%1%' or
+           t2.memnickname like '%1%')
+           order by t1.bdcdate desc )t3
+where rownum between 1 and 10
+order by rownum asc;
+
+
+select rownum, t3.*
+  from (select t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname
+          from board t1, member t2
+         where t1.memno = t2.memno
+           order by t1.bdcdate desc)t3
+ where rownum between 1 and 10;
+
+
+select rownum, t3.*
+  from (select t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname
+          from board t1, member t2
+         where t1.memno = t2.memno
+      order by t1.bdcdate desc)t3;
+
+
+
+
+--3333333333333
+select no, t3.bdno, t3.bdcg, t3.bdtitle, t3.memno, t3.bdcontent, t3.bdcdate, t3.memnickname
+from (
+    select rownum no, t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname
+    from board t1, member t2
+    where t1.memno=t2.memno
+    order by t1.bdno desc)t3
+   where no between 1 and 10
+   and t3.bdcg = '정보공유'
+order by no asc;
+
+
+update board
+
+--1번째
+select no, t3.bdno, t3.bdcg, t3.bdtitle, t3.memno, t3.bdcontent, t3.bdcdate, t3.memnickname
+from (
+    select rownum no, t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname
+    from board t1, member t2
+    where t1.memno=t2.memno
+    order by t1.bdno desc)t3
+order by no asc;
+
+
+--22222
+select no, t3.bdno, t3.bdcg, t3.bdtitle, t3.memno, t3.bdcontent, t3.bdcdate, t3.memnickname
+from (
+    select rownum no, t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname
+    from board t1, member t2
+    where t1.memno=t2.memno
+    order by t1.bdno desc)t3
+   where no between 1 and 25
+order by no asc;
+
+
+--4444444444444검색어 넣기
+select no, t3.bdno, t3.bdcg, t3.bdtitle, t3.memno, t3.bdcontent, t3.bdcdate, t3.memnickname, t3.bdview
+from (
+    select rownum no, t1.bdno, t1.bdcg, t1.bdtitle, t1.memno, t1.bdcontent, t1.bdcdate, t2.memnickname, t1.bdview
+    from board t1, member t2
+    where t1.memno=t2.memno
+    order by t1.bdno desc)t3
+   where no between 20 and 25
+   and t3.bdcg = '정보공유'
+   and
+    (t3.bdtitle like '%1%' or
+      t3.bdcontent like '%1%' or
+     t3.memnickname like '%1%')   
+order by no asc;
+
+
+  INSERT INTO BOARD (BDNO, BDCG,BDTITLE,MEMNO,BDCONTENT)
+  VALUES (BOARD_BDNO_SEQ.nextval, '정보공유','제목1',1,'본문내용입니다.');
+
+select * from board;
+commit;

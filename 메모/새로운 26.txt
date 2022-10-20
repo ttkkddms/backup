@@ -1,0 +1,10 @@
+@component
+
+@Controller
+@Configuration
+
+
+
+
+
+빈->객체 => spring controller 가 관리하는 

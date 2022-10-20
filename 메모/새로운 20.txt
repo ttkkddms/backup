@@ -1,0 +1,19 @@
+8/12
+어드민 버튼 호버
+게시판 버튼 수정
+
+
+http://localhost:9080/api/pub/json?faciNm='요가'
+
+js포맷문자열 => js객체
+JSON.parse(js포맷문자열)
+
+js객체 => js포맷문자열
+JSON.stringify(jsObject)
+
+WAS(Springboot)
+
+
+
+8/17
+인풋 제한메세지

@@ -1,0 +1,17 @@
+빈 등록
+1. 빈(bean)
+	스프링 컨테이너가 생명주기를 관리하는 자바객체
+	
+2. 자동 빈등록
+	@Component
+	@Controller
+	@Service
+	@Repository
+
+3. 빈참조 방법
+	@Autowired
+	생성자 주입 : this
+	필드 주입 : @Autowired
+	세터 주입(Setter)
+	
+4.
