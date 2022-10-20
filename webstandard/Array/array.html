@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[]; //빈배열생성
+        console.log(arr);
+        
+        arr.push(1,2,3,4); //뒤에 요소추가
+        arr.length=100; //뒤에 요소추가
+        console.log(arr);
+        
+        arr.unshift(-1,0); //앞에 추가
+        console.log(arr);
+        
+        arr.splice(2,0,4,5,6); //사이에 추가 (2번인덱스에서 0개 삭제하고 4,5,6 추가)
+        console.log(arr);
+        
+        arr.splice(2,3,4,4); //중간 요소대체 (2번 인덱스에서 3개 삭제하고 4,4 추가)
+        console.log(arr);
+        
+        arr.pop(); //뒤 요소 제거
+        console.log(arr);
+        arr.shift(); //앞 요소 제거
+        console.log(arr);
+        arr.splice(1,2);//중간 요소 제거 (1번 인덱스부터 2개 제거)
+        console.log(arr);
+        
+        arr.splice(2); //특정 인덱스부터 이후 모든 요소 제거(2번인덱스이후 다 제거)
+        console.log(arr);
+        
+        arr[0] = 10; //수정
+        console.log(arr);
+        
+        arr.splice(0,1,1,2,3,4,5); //수정 (0번인덱스부터 1개 삭제하고 나머지 추가)
+        console.log(arr);
+        
+        const arr2=[...arr]; //복제. 독립적.
+        console.log(arr2);
+
+        const arr3=arr; //하나 배열 바꾸면 똑같이 바뀜.
+
+
+
+
+
+        //--모든 요소에 순차접근
+        //for
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i]*2);
+        }
+
+        //for~of
+        for(let ele of arr){
+            console.log(ele*2);
+        }
+
+        //고차함수
+        console.log('--고차함수--')
+        arr.forEach(function(ele,idx,arr){
+            console.log(ele,idx,arr);
+        });
+
+        arr.forEach((ele)=>{
+            console.log(ele*2)
+        });
+        
+        arr.forEach(ele=>console.log(ele)); //중괄호 생략
+
+
+
+
+    </script>
+</body>
+</html>

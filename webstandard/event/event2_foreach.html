@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="menu">
+            <li class="menu__item">menu1</li>
+            <li class="menu__item">menu2</li>
+            <li class="menu__item">menu3</li>
+        </ul>
+        <div id="msg"></div>
+    </div>
+
+    <script>
+       
+        const $menu = document.querySelectorAll('#container .menu .menu__item');
+        const $msg = document.getElementById('msg');
+
+        console.log($menu);
+
+        $menu.forEach((ele) => {
+            // console.log(ele);
+            ele.addEventListener('click', evt => {
+                console.log(evt.target.textContent);
+                const msg = `${evt.target.textContent}를 선택했습니다.`;
+                $msg.textContent = msg;
+            })
+        });
+
+
+
+      
+
+
+    </script>
+</body>
+
+</html>

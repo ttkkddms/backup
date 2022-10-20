@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main/reset.css">
+    <style>
+        /* * {
+            outline: 1px solid black;
+        } */
+
+        body {
+            margin: 0;
+            background-color: #aaa;
+        }
+
+        /* 공통 */
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #wrapper>.container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #wrapper>.container>.content {
+            width: 80%;
+        }
+
+        /* uppermost */
+        #wrapper>#uppermost>.content {
+            width: 100vw;
+            height: 50px;
+            background-color: #f55252;
+        }
+
+        /* header */
+        #wrapper>#header {
+            background-color: #db5d5d;
+        }
+
+        #wrapper>#header>.content {
+            height: 150px;
+            background-color: #ff9395;
+        }
+
+        /* gnb */
+        #wrapper>#gnb {
+            background-color: #ffcccb;
+        }
+
+        #wrapper>#gnb>.content {
+            height: 100px;
+            background-color: aliceblue;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .content ul {
+            display: flex;
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            padding: 10px;
+            background-color: gray;
+
+        }
+
+
+        .content ul li {
+            flex: 1;
+            background-color: white;
+            text-align: center;
+            transition: all 0.3s;
+            flex-wrap: nowrap;
+        }
+
+        .content ul li:hover {
+            background-color: aquamarine;
+            box-shadow: 4px 4px lightblue;
+            z-index: 1;
+            transform: scale3d(1.025, 1.025, 1.025);
+        }
+
+        .content ul li:hover ul {
+            display: block;
+        }
+
+        .content ul ul {
+            display: none;
+        }
+
+
+
+        /* main */
+        #wrapper>#main {
+            background-color: #ccc;
+        }
+
+        #wrapper>#main>.content {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 1;
+            border: 5px solid white;
+            box-sizing: border-box;
+            height: 80vh;
+        }
+
+        #wrapper>#main>.content>.content__side-menu {
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0; */
+            min-width: 100px;
+            background-color: skyblue;
+        }
+
+        #wrapper>#main>.content>.content__contents {
+            flex: 2.5;
+            background-color: slategrey;
+        }
+
+
+        #wrapper>#main>.content>.content__side-banner {
+            flex: 1;
+            background-color: #f8bbd0;
+        }
+
+
+
+
+        /* footerMenu */
+        #wrapper>#footerMenu>.content {
+            /* width: 100vw; */
+            height: 50px;
+            background-color: antiquewhite;
+        }
+
+        /* footer */
+        #wrapper>#footer>.content {
+            /* width: 100vw; */
+            height: 150px;
+            background-color: azure;
+        }
+
+        #add {
+            position: fixed;
+            background-color: yellow;
+            width: 80px;
+            top: 200px;
+            right: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="uppermost" class="container">
+            <div class="content">uppermost</div>
+        </div>
+
+        <header id="header" class="container">
+            <div class="content">header</div>
+        </header>
+
+        <nav id="gnb" class="container">
+            <div class="content">
+                <ul>
+                    <li><a href=".">menu1</a>
+                        <ul>
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li><a href=".">menu2</a>
+                        <ul>
+                            <li>submenu1</li>
+                            <li>submenu2</li>
+                            <li>submenu3</li>
+                        </ul>
+                    </li>
+                    <li><a href=".">menu3</a></li>
+                    <li><a href=".">menu4</a></li>
+                    <li><a href=".">menu5</a></li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <main id="main" class="container">
+
+
+            <section class="content">
+
+                <article class="content__side-menu">
+                    <p>content__side-menu </p>
+                </article>
+
+                <article class="content__contents">
+                    <p>content__contents</p>
+                </article>
+                <article class="content__side-banner">
+                    <p>content__side-banner </p>
+                </article>
+            </section>
+
+
+
+        </main>
+
+        <div id="footerMenu" class="container">
+            <div class="content">footerMenu</div>
+        </div>
+
+        <footer id="footer" class="container">
+            <div class="content">footer</div>
+        </footer>
+    </div>
+    <div id="add">
+        <ul>
+            <li>광고1</li>
+            <li>광고2</li>
+            <li>광고3</li>
+            <li>광고4</li>
+            <li>광고5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

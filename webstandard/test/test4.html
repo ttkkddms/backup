@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            outline: 1px solid black;
+        }
+
+        body {
+            margin: 0;
+            background-color: #999;
+            color: #999;
+        }
+
+        ul,
+        li,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style-type: none;
+        }
+
+        #container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-self: center;
+        }
+
+        #container .product {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container .product .product__item {
+            flex-basis: 200px;
+            flex-shrink: 0;
+            /* 화면 줄여도 아이템폭을 줄이지않음 */
+            position: relative;
+            margin: 0 5px;
+            transition: all 0.5s;
+            opacity: 0.7;
+            color: white;
+        }
+
+        #container .product .product__item:hover {
+            flex-basis: 200px;
+            margin: 0 20px;
+            opacity: 1;
+        }
+
+
+        #container .product .product__item:hover .profile.profile--red {
+            color: #ff000088;
+        }
+
+        #container .product .product__item:hover .profile.profile--white {
+            color: white;
+        }
+
+        #container .product .product__item:hover .profile.profile--purple {
+            color: #dda0ddbe;
+        }
+
+
+        #container .product .product__item:hover .profile .profile__contents {
+            max-height: 200px;
+        }
+
+        #container .product .product__item .profile {
+            position: relative;
+            font-weight: 900;
+        }
+
+        #container .product .product__item .profile img {
+            width: 100%;
+        }
+
+        #container .product .product__item .profile .profile__contents {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 16px;
+            overflow: hidden;
+        }
+
+        #container .product .product__item .profile .profile__contents::before {
+            /* 가상요소 */
+            content: ' ';
+            display: block;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+            /* IE6-9 */
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            opacity: 0.3;
+        }
+
+        #container .product .product__item .profile .profile__contents h3 {
+            font-size: 16px;
+            margin-top: 0;
+        }
+
+        #container .product .product__item .profile .profile__contents h3 span {
+            font-size: 0.9em;
+            display: block;
+        }
+
+        #container .product .product__item .profile .profile__contents h3 span::before {
+            content: attr(title);
+            padding-right: 5px;
+        }
+
+        #container .product .product__item .profile .profile__contents h3 span::after {
+            content: attr(data-unit);
+        }
+
+        #container .product .product__item .profile .profile__contents p {
+            font-size: 12px;
+            color: white;
+            max-height: 0;
+            max-width: 200px;
+            line-height: 1.2;
+            transition: all 0.8s;
+            overflow: hidden;
+        }
+
+        #container .product .product__item:hover .profile .profile__contents p {
+            max-height: 150px;
+            transition-delay: 0.4s;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="container">
+        <ul class="product">
+            <li class="product__item">
+                <div class="profile profile--red">
+                    <img src="https://cdn.pixabay.com/photo/2014/10/02/08/30/honey-bee-469560_960_720.png" alt="">
+                    <div class="profile__contents">
+                        <h3>고양이 <span title="가격" data-unit="짱">고등어</span></h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat nostrum necessitatibus,
+                            iure adipisci ex, aperiam facere, sed quo quaerat aliquid aut dignissimos cupiditate sunt
+                            aliquam molestiae illum dolores voluptatem ipsam! Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Autem fugiat dicta earum consectetur? Tempore numquam est expedita ad
+                            deserunt aperiam mollitia rem? Nesciunt asperiores, dolore dolorem ratione ab natus quasi.
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="product__item">
+                <div class="profile profile--white">
+                    <img src="https://cdn.pixabay.com/photo/2012/10/12/17/12/cat-61079_960_720.jpg" alt="">
+                    <div class="profile__contents">
+                        <h3>고양이 <span title="가격" data-unit="짱">고등어2</span></h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat nostrum necessitatibus,
+                            iure adipisci ex, aperiam facere, sed quo quaerat aliquid aut dignissimos cupiditate sunt
+                            aliquam molestiae illum dolores voluptatem ipsam!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="product__item">
+                <div class="profile profile--purple">
+                    <img src="https://cdn.pixabay.com/photo/2017/08/07/12/27/cat-2603300_960_720.jpg" alt="">
+                    <div class="profile__contents">
+                        <h3>고양이 <span title="가격" data-unit="짱">귀엽다</span></h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat nostrum necessitatibus,
+                            iure adipisci ex, aperiam facere, sed quo quaerat aliquid aut dignissimos cupiditate sunt
+                            aliquam molestiae illum dolores voluptatem ipsam!</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main/reset.css">
+    <style>
+        /* * {
+            outline: 1px solid black;
+        } */
+
+        body {
+            margin: 0;
+            background-color: #aaa;
+        }
+
+        /* 공통 */
+        #wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    
+        #wrapper>.container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #wrapper>.container>.content {
+            width: 80%;
+        }
+
+        /* uppermost */
+        #wrapper>#uppermost>.content {
+            width: 100vw;
+            height: 50px;
+            background-color: #f55252;
+        }
+
+        /* header */
+        #wrapper>#header {
+            background-color: #db5d5d;
+        }
+
+        #wrapper>#header>.content {
+            height: 150px;
+            background-color: #ff9395;
+        }
+
+        /* gnb */
+        #wrapper>#gnb {
+            background-color: #ffcccb;
+        }
+
+        #wrapper>#gnb>.content {
+            height: 50px;
+            background-color: aliceblue;
+        }
+
+        /* main */
+        #wrapper>#main {
+            background-color: #ccc;
+        }
+
+        #wrapper>#main>.content {
+            display: flex;
+            border: 5px solid white;
+            box-sizing: border-box;
+        }
+
+        #wrapper>#main>.content>.content__contents {
+            flex: 1;
+            background-color: slategrey;
+        }
+
+
+        #wrapper>#main>.content>.content__side-banner {
+            flex: 1;
+            background-color: #f8bbd0;
+        }
+
+        #wrapper>#main>.content>.content__side-menu {
+            flex: 1;
+            /* flex-grow: 1; */
+            /* flex-shrink: 1; */
+            /* flex-basis: 0; */
+            /* min-width: 100px; */
+            background-color: skyblue;
+        }
+
+
+        /* footerMenu */
+        #wrapper>#footerMenu>.content {
+            /* width: 100vw; */
+            height: 50px;
+            background-color: antiquewhite;
+        }
+
+        /* footer */
+        #wrapper>#footer>.content {
+            /* width: 100vw; */
+            height: 150px;
+            background-color: azure;
+        }
+        #add {
+            position: fixed;
+            background-color: yellow;
+            width:80px;
+            top: 200px;
+            right: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="uppermost" class="container">
+            <div class="content">uppermost</div>
+        </div>
+
+        <header id="header" class="container">
+            <div class="content">header</div>
+        </header>
+
+        <nav id="gnb" class="container">
+            <div class="content">gnb</div>
+        </nav>
+
+        <main id="main" class="container">
+            <section class="content">
+                <article class="content__contents">
+                    <p>content__contents Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam commodi,
+                        eius corporis ea saepe hic dolorem labore, ex inventore, similique itaque voluptas sunt amet
+                        delectus magni velit beatae. Totam, quisquam.</p>
+                </article>
+                <article class="content__side-banner">
+                    <p>content__side-banner Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque maxime
+                        blanditiis aperiam. Dolor excepturi reprehenderit itaque amet dolorem optio dolore repellendus
+                        corrupti! Et soluta dolores aspernatur corrupti optio explicabo. Ratione!</p>
+                </article>
+                <article class="content__side-menu">
+                    <p>content__side-menu Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore inventore
+                        sequi qui cumque hic. Earum saepe, incidunt adipisci, blanditiis eius culpa omnis optio quia
+                        repudiandae qui odit? Adipisci, ab maxime!</p>
+                </article>
+            </section>
+        </main>
+
+        <div id="footerMenu" class="container">
+            <div class="content">footerMenu</div>
+        </div>
+
+        <footer id="footer" class="container">
+            <div class="content">footer</div>
+        </footer>
+    </div>
+    <div id="add">
+        <ul>
+            <li>광고1</li>
+            <li>광고2</li>
+            <li>광고3</li>
+            <li>광고4</li>
+            <li>광고5</li>
+        </ul>
+    </div>
+</body>
+
+</html>

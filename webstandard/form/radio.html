@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend> HouSe </legend>
+        <input type="radio" name="home" id="val1"><label for="val1">집</label>
+        <input type="radio" name="home" id="val2"><label for="val2">홈</label>
+        <input type="radio" name="home" id="val3"><label for="val3">하우스</label>
+    </fieldset>
+
+    <div id="msg"></div>
+    <script>
+
+        //배열로 받기
+        const $homes = document.querySelectorAll('input[type=radio]');
+        console.log($homes);
+        // console.log(document.querySelector('fieldset').children);
+        // console.log(document.querySelector('fieldset').firstElementChild);
+        // console.log(document.querySelector('fieldset').lastElementChild);
+
+        //case1)
+        // for (let i = 0; i < $homes.length; i++) {
+        //     $homes[i].addEventListener('click', selectHome_h);
+        // }
+
+        //case2
+        // for (let $home of $homes) {
+        //     $home.addEventListener('click', selectHome_h);
+        // }
+
+        //case3
+        // $homes.forEach(function(ele){ele.addEventListener('click',selectHome_h)});
+
+        //case4
+        $homes.forEach((ele)=>{ele.addEventListener('click',selectHome_h)});
+
+
+
+        function selectHome_h(evt) {
+            // console.log(evt.target.id);
+            // console.log(evt.target.parentElement); //필드셋
+            // console.log(evt.target.parentElement.parentElement); //바디
+            // console.log(evt.target.previousElementSibling); //       
+            // console.log(evt.target.nextElementSibling); //       
+            // console.log(evt.target.nextElementSibling.textContent); //    
+            // console.log(evt.target.closest('body'));
+
+            const selectedHome = evt.target.nextElementSibling.textContent;
+            console.log(selectedHome);
+            const msg = `${selectedHome}를 선택했습니다.`;
+            document.getElementById('msg').textContent = msg;
+        }
+
+
+
+          // const $val1=document.querySelector('#val1');
+        // const $val2=document.querySelector('#val2');
+        // const $val3=document.querySelector('#val3');
+
+        // $val1.addEventListener('click',selectv1_h); //하나의 엘리먼트에 여러개 기능
+        // $val1.addEventListener('contextmenu',selectv1_h);
+
+        // $val2.addEventListener('click',selectv2_h);
+        // $val3.addEventListener('click',selectv3_h);
+
+        // function selectv1_h(e){
+        //     console.log('v1 클릭');
+        //     console.log(e.type);
+        //     console.log(e.target);
+        // }
+        // function selectv2_h(e){
+        //     console.log('v2 클릭');
+        // }
+        // function selectv3_h(e){
+        //     console.log('v3 클릭');
+        // }
+
+
+    </script>
+
+</body>
+
+</html>

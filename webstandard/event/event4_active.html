@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            outline: 1px solid black;
+        }
+
+        .active {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul class="menu">
+            <!-- data-속성이름="속성이름" -->
+            <li class="menu__item" data-selected-menu="m1">menu1</li>
+            <li class="menu__item" data-selected-menu="m2">menu2</li>
+            <li class="menu__item" data-selected-menu="m3">menu3</li>
+        </ul>
+        <div id="msg">메뉴를 선택했습니다.</div>
+    </div>
+
+    <script>
+
+        const menuItemClick_h=e=>{
+
+            console.log(e.target.tagName);
+            //li요소만 처리
+            if(e.target.tagName != 'LI') return;
+
+            const $menuItems = document.querySelectorAll('#container .menu .menu__item');
+            console.log($menuItems);
+
+            //1) for of
+            // for(let $menuItem of $menuItems){
+            //     // case1)
+            //     // if($menuItem ==e.target){
+            //     //     $menuItem.classList.add('active');
+            //     // }else{
+            //     //     $menuItem.classList.remove('active');
+            //     // }
+            //     //case2)
+            //     $menuItem.classList.toggle('active',$menuItem ==e.target);
+            // }
+            //2) foreach
+            $menuItems.forEach($menuItem=>{
+                $menuItem.classList.toggle('active',$menuItem==e.target);
+            });
+        };
+        document.querySelector('.menu').addEventListener('click', menuItemClick_h);
+
+
+
+        
+
+        // const $menu = document.querySelectorAll('#container .menu .menu__Item');
+        // for (let i = 0; i < $menu.length; i++) {
+        //     $menu[i].addEventListener('click', handler)
+        // }
+
+
+
+        // function handler(e) {
+        //     const { type, target, currentTarget } = e;
+        //     console.log(target, currentTarget);
+        //     e.target.classList.siblings.toggle('active');
+        //     e.target.classList.toggle('active');
+        // }
+
+
+       
+
+        // const selectMenu_h = e => {
+        //     const msg = `${e.target.textContent}메뉴를 선택했습니다.`;
+        //     document.getElementById('msg').textContent = msg;
+        //     const { type, target, currentTarget } = e;
+        //     console.log(target, currentTarget);
+        // }
+        // document.querySelector('#container .menu')
+        //     .addEventListener('click', selectMenu_h);
+
+
+
+
+        // document.querySelector('#container .menu')
+        // .addEventListener('click',color_h);
+
+        // const color_h =e=>{
+        //     e.target.classList.toggle('active');
+
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

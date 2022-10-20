@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input.bg_green {
+            background-color: green;
+        }
+
+        input.bg_red {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="val1" type="text">+<input id="val2" type="text">
+    = <input id="userInput" type="text">
+
+    <button id="result">결과확인</button>
+    <button id="retry">다시풀기</button>
+
+    <script>
+        //1) input요소에 랜덤값 반영
+        const $val1 = document.getElementById('val1');
+        const $val2 = document.getElementById('val2');
+        
+        //2) 2개의 랜덤값 발생
+        $val1.value = Math.floor(Math.random() * 900) + 100;
+        $val2.value = Math.floor(Math.random() * 900) + 100;
+
+
+
+        //3) 결과확인버튼 클릭
+        //3-1) input요소값을 더한값과 사용자 입력값 비교
+        const $result = document.getElementById('result'); //인풋값
+        $result.addEventListener('click', result_f); 
+
+        const $userInput = document.getElementById('userInput');
+
+        function result_f(evt) {
+            console.log('결과확인버튼 클릭됨!');
+
+            const sum_result = parseInt($val1.value) + parseInt($val2.value); //합계
+            console.log(sum_result);
+
+            $userInput.value=sum_result; //결과화면에표시!
+        }
+
+        //4) 다시풀기 버튼 클릭
+        //4-1) input요소에 랜덤값 반영
+        //4-2)결과값 초기화
+        const $retry = document.getElementById('retry');
+        $retry.addEventListener('click', retry_f);
+
+        function retry_f(evt){
+            $val1.value = Math.floor(Math.random() * 900) + 100;
+            $val2.value = Math.floor(Math.random() * 900) + 100;
+            $userInput.value=null;
+            console.log('다시풀기버튼 클릭됨!');
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 클릭시 기본값은 빨강 */
+        a:active {
+            color: yellow;
+        }
+
+        /* 방문이력있을시 기본값 보라 */
+        a:visited {
+            color: orange;
+        }
+
+        /* 방문전 상태 기본값은 파랑 */
+        a:link {
+            color: red
+        }
+
+        a:hover {
+            color: green
+        }
+
+        a:active,
+        a:visited,
+        a:link,
+        a:hover {
+            color: black;
+            cursor: pointer;
+        }
+
+        .btn {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">버튼추가</a>
+    <div id="container">
+        <!-- <button class="btn">클릭</button> -->
+    </div>
+
+    <script>
+        const $aTag = document.querySelector('a');
+        const addBtn_h = function (evt) {
+            evt.preventDefault();//기본이벤트 취소
+            console.log('클릭' + evt.target);
+
+            //1) 엘리먼트 생성, 속성.컨텐츠 없는 빈 엘리먼트
+            const $button = document.createElement('button');
+            console.log($button);
+
+            //2) textNode생성
+            const $textNode = document.createTextNode('클릭');
+            console.log($textNode);
+
+            //3) element의 자식으로  textNode추가
+            $button.appendChild($textNode);
+            console.log($button);
+
+            //4) #container의 자식으로 $button 추가
+            const $parent = document.getElementById('container');
+            $parent.appendChild($button);
+
+            //5) $button에 속성추가하기
+            $button.classList.add('btn');
+
+            //6)$button에 click 이벤트 등록
+            $button.addEventListener('click', function () {
+                console.log('클릭');
+            });
+        }
+        $aTag.addEventListener('click', addBtn_h);
+    </script>
+</body>
+
+</html>

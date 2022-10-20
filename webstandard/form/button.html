@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"><button>클릭</button>
+    <p id="msg"></p>
+
+    <script>
+        const $button=document.querySelector('button');
+
+        // //1 함수선언
+        // $button.addEventListener('click',inputCheck_h);
+
+        // function inputCheck_h(){
+        //     console.log('클릭됨');
+        //     const $input=document.querySelector('input');
+
+        //     if($input.value.trim().length == 0){
+        //         console.log('값을 입력하세요.');
+        //         document.getElementById('msg').textContent = '값을 입력하세요!';
+        //         $input.focus();
+        //         $input.style.backgroundColor ='#ff000033';
+        //     }else{
+        //         document.getElementById('msg').textContent='';
+        //         $input.style.backgroundColor ='#eee';
+        //     }
+        // }
+
+
+
+        // //2 익명함수. 선언 후 호출
+        // const inputCheck_h = function(){
+        //     console.log('클릭됨');
+        // }
+        // $button.addEventListener('click',inputCheck_h);
+
+
+        // //3 람다. 선언 후 호출
+        // const inputCheck_h=()=>{
+        //     console.log('클릭');
+        // }
+        // $button.addEventListener('click',inputCheck_h);
+
+
+        //4
+        $button.addEventListener('click', function(){
+            console.log('클릭');
+            const $input=document.querySelector('input');
+
+            if($input.value.trim().length == 0){
+                console.log('값을 입력하세요.');
+                document.getElementById('msg').textContent = '값을 입력하세요!';
+                $input.focus();
+                $input.style.backgroundColor ='#ff000033';
+            }else{
+                document.getElementById('msg').textContent='';
+                $input.style.backgroundColor ='#eee';
+            }
+        });
+
+
+    </script>
+</body>
+</html>

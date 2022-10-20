@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="create_element.js"></script>
+    <style>
+        * {
+            outline: 1px solid black;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        #container .wrap {
+            display: flex;
+            align-items: stretch;
+        }
+
+        #container .wrap .title {
+            align-self: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="wrap">
+            <label for="" class="title">댓글작성</label>
+            <textarea class="comment" name="" id="comment" cols="30" rows="10"></textarea>
+            <button class="btn btn__witre">등록</button>
+        </div>
+        <p id="msg"></p>
+
+        <div class="comment__list">
+            <ul class="comments">
+                <li class="comment__item">댓글1</li>
+                <li class="comment__item">댓글2</li>
+                <li class="comment__item">댓글3</li>
+            </ul>
+
+
+        </div>
+    </div>
+    <script>
+
+       const addComment_h=e=>{
+        if(document.querySelector('textarea').value.trim().length ==0){
+                alert("내용을 입력하세요!");
+            return;
+        }
+        const $fragment = document.createDocumentFragment();
+
+        $fragment.appendChild(makeElements('li',{class:'comment__item'},document.querySelector('textarea').value));
+
+        document.querySelector('ul').appendChild($fragment);
+        document.querySelector('textarea').value='';
+    }
+
+
+
+
+
+    document.querySelector('button').addEventListener('click',addComment_h);
+     
+    </script>
+</body>
+
+</html>
